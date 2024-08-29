@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img class="logo-img" src="logo/wrench.png" alt="logo">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="mailto:muhammadnadhar@gmail.com">email</a></li>
+        <li><a href="#comentar">Comentari</a></li>
+      </ul>
+    </nav>
+    <button class="btn-cta" onclick="redirInstragram()" type="submit">Foollow me</button>
+  </header>
+
+  <div class="container">
+    <div class="intro">
+      <p class="title">Hallow Saya Muhammad Nadhar</p>
+      <p class="description">FOTOFOLIO NO I</p>
+      <img src="foto/fantastik.jpg" alt="my Foto" class="img-foto" id="image" style="opacity: 1;">
+    </div>
+  </div>
+
+  <!-- bagian skill-->
+  <div class="skil-container">
+    <div class="skil-card">
+      <img src="logo/html.png" alt="Html " class="img-skil">
+
+    </div>
+    <div class="skil-card">
+      <img src="logo/css.png" alt="Javascript" class="img-skil">
+
+    </div>
+    <div class="skil-card">
+      <img src="logo/Javascript.jpg" alt="Javascript" class="img-skil">
+
+    </div>
+    <div class="skil-card">
+      <img src="logo/neovim.jpg" alt="Neovim" class="img-skil">
+
+    </div>
+    <div class="skil-card">
+      <img src="logo/termux.jpeg" alt="termux" class="img-skil">
+
+    </div>
+  </div>
+
+
+  <div class="parallax">
+    <div class="tentang">
+      <p class="description"> Ngoding aja dulu jagonya mah belakangan</p>
+      <div class="mt-10">
+        <button type="submit" onclick="redirWhatsapp()" class="btn-cta">Whatsapp</button>
+      </div>
+    </div>
+    <div class="container ">
+      <div class="card" id="tentang">
+        <div class="card-item">
+          <img src="logo/24-hours.png" alt="icon 24 jam" class="icon">
+          <p class="card-title">Waktu</p>
+          <p class="card-description">setiap menitnya berharga Rp:24.000</p>
+        </div>
+        <div class="card-item">
+          <img src="logo/best-price.png" alt="best-price" class="icon">
+          <p class="card-title">💌Diary</p>
+          <p class="card-description">hasilnya dapat di petik setelah menanamnya</p>
+        </div>
+        <div class="card-item">
+          <img src="logo/partner.png" alt="icon-3" class="icon">
+          <p class="card-title">Program</p>
+          <p class="card-description">🚫 Bug hanyalah teka-teki </p>
+        </div>
+        <div class="card-item">
+          <img src="logo/CUYUNIVERSE Banner Design.jpg" alt="icon-3" class="icon">
+          <p class="card-title">&reg;Dea Afrizal</p>
+          <p class="card-description">References </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- bagiana Commentar-->
+  <div id="comentar" class="comment-section">
+    <img src="logo/message.jpg" alt="" class="img-message">
+    <div class="comment-form">
+      <textarea rows="" id="comment-input" placeholder="mbahkan Comentar ..."></textarea>
+      <button id="submit-comment" class="btn-cta">submit</button>
+    </div>
+    <div class="comments-list">
+      <!-- bagian comentar -->
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="footer-1">
+      <p class="content">&copy;Muhammad Nadhar 2024</p>
+      <p class="content"></p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
+</html>

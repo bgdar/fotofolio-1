@@ -1,0 +1,53 @@
+declare -gx REPLIT_RTLD_LOADER=1
+read -r _new_path <<< "/nix/store/f6bignmny64x9ibhf9aksdn9cw5wwbjy-pid1/bin:/nix/store/200w4x1ij4dn0dcqh6ws70bzdinyac2n-replit-runtime-path/bin:/home/runner/.nix-profile/bin:/home/runner/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+#PATH=/nix/store/f6bignmny64x9ibhf9aksdn9cw5wwbjy-pid1/bin:/nix/store/200w4x1ij4dn0dcqh6ws70bzdinyac2n-replit-runtime-path/bin:/home/runner/.nix-profile/bin:/home/runner/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+if [ -e "/run/replit/env/last" ]; then read -r _last_path < <(\grep '^#PATH=' /run/replit/env/last | cut -f 2 -d =); fi
+_user_components="$(\tr : $'\n' <<< "${PATH:-}" |\grep -xv -f <(\tr : $'\n' <<< "${_last_path}") |\tr $'\n' :)"
+declare -gx PATH="${_user_components}${_new_path}"
+declare -gx LANG=en_US.UTF-8
+declare -gx REPLIT_PID1_VERSION=0.0.0-549840c
+declare -gx XDG_CONFIG_HOME=/home/runner/fotofolio-1/.config
+declare -gx NIXPKGS_ALLOW_UNFREE=1
+declare -gx NIX_PATH=nixpkgs=/home/runner/.nix-defexpr/channels/nixpkgs-stable-23_11:/home/runner/.nix-defexpr/channels
+declare -gx REPLIT_CLUSTER=sisko
+declare -gx REPLIT_DB_URL=https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE3MjUwNTY0MTgsImlhdCI6MTcyNDk0NDgxOCwiZGF0YWJhc2VfaWQiOiI1YmI5ZjhhMy1hNjY3LTRiODktODlmMS1jNjQ1M2E4ODI1ZmQifQ.ixf95_iZ0vtmR2_kfNcpKAlPNbgP7OZtNWsHt0DZ5MQZwIFkjTHFspaqv7psna6IhA33gEBkkl4fgnoFFpLF7w
+declare -gx DIRENV_CONFIG=/etc/direnv
+declare -gx PROMPT_DIRTRIM=2
+declare -gx REPL_PUBKEYS='{"crosis-ci":"7YlpcYh82oR9NSTtSYtR5jDL4onNzCGJGq6b+9CuZII=","crosis-ci:1":"7YlpcYh82oR9NSTtSYtR5jDL4onNzCGJGq6b+9CuZII=","crosis-ci:latest":"7YlpcYh82oR9NSTtSYtR5jDL4onNzCGJGq6b+9CuZII=","prod":"tGsjlu/BJvWTgvMaX7acuUb7AO1dXOrRiuk7y083RFE=","prod:1":"tGsjlu/BJvWTgvMaX7acuUb7AO1dXOrRiuk7y083RFE=","prod:2":"8uGN+vfszlnV93/HCSHlVLG0xddMlPkir1Ni4JKT4+w=","prod:3":"9+MCOSHQSQlcodXoot8dC8NLhc862nLkx1/VMsbY2h8=","prod:4":"8uGN+vfszlnV93/HCSHlVLG0xddMlPkir1Ni4JKT4+w=","prod:5":"9+MCOSHQSQlcodXoot8dC8NLhc862nLkx1/VMsbY2h8=","prod:latest":"tGsjlu/BJvWTgvMaX7acuUb7AO1dXOrRiuk7y083RFE=","vault-goval-token":"D5jJoMx1Ml54HM92NLgXl+MzptwDqbSsfyFG6f52g9E=","vault-goval-token:1":"D5jJoMx1Ml54HM92NLgXl+MzptwDqbSsfyFG6f52g9E=","vault-goval-token:latest":"D5jJoMx1Ml54HM92NLgXl+MzptwDqbSsfyFG6f52g9E="}'
+declare -gx REPLIT_DEV_DOMAIN=5bb9f8a3-a667-4b89-89f1-c6453a8825fd-00-2wjjtflnxfbqz.sisko.replit.dev
+declare -gx XDG_CACHE_HOME=/home/runner/fotofolio-1/.cache
+declare -gx GIT_ASKPASS=replit-git-askpass
+declare -gx DISPLAY=:0
+declare -gx GIT_EDITOR=replit-git-editor
+declare -gx REPL_LANGUAGE=html
+declare -gx REPL_SLUG=fotofolio-1
+declare -gx REPL_HOME=/home/runner/fotofolio-1
+declare -gx REPLIT_PID1_FLAG_NIXMODULES_BEFORE_REPLIT_NIX=1
+declare -gx HOSTNAME=79bf7422e930
+declare -gx REPLIT_SUBCLUSTER=interactive
+declare -gx REPL_OWNER_ID=36060252
+declare -gx SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+declare -gx XDG_DATA_HOME=/home/runner/fotofolio-1/.local/share
+declare -gx HOME=/home/runner
+declare -gx USER=runner
+declare -gx LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
+declare -gx REPL_ID=5bb9f8a3-a667-4b89-89f1-c6453a8825fd
+declare -gx COLORTERM=truecolor
+declare -gx NODE_EXTRA_CA_CERTS=/etc/ssl/certs/ca-certificates.crt
+declare -gx REPLIT_BASHRC=/nix/store/j644dpkpfrh4fmicps2vkzsafmb49mvs-replit-bashrc/bashrc
+declare -gx REPLIT_NIX_CHANNEL=stable-23_11
+declare -gx NIX_PS1='\[\033[01;34m\]\w\[\033[00m\]\$ '
+declare -gx REPLIT_CLI=/nix/store/0kfsvsg0i7fs1d88dbn2bkyk81xxww6l-pid1-0.0.1/bin/replit
+declare -gx REPLIT_ENVIRONMENT=production
+declare -gx REPL_IDENTITY=v2.public.Q2lRMVltSTVaamhoTXkxaE5qWTNMVFJpT0RrdE9EbG1NUzFqTmpRMU0yRTRPREkxWm1RU0MyRnJkVzU2WlhKdk9UYzFHZ3RtYjNSdlptOXNhVzh0TVNJa05XSmlPV1k0WVRNdFlUWTJOeTAwWWpnNUxUZzVaakV0WXpZME5UTmhPRGd5Tldaa09OejRtQkZhRkFvRmMybHphMjhTQzJsdWRHVnlZV04wYVhabPOKEnvN9vTBmErHS8kF2pFnG_X10q3juMB-TbQT6X28Emyz8Jhbhn2n8H56KBwEOxO9kDmw87Em9mV0CAOT6g4.R0FFaUJtTnZibTFoYmhLV0NIWXlMbkIxWW14cFl5NVJNbVF6VTFjNE1sVkZUakJhTVd4U1lsUm9jV1ZxUWpOU1ZrNUZVVmR3TldKRWFIaE5hMHB2VWtkU05Vd3hRbFZSVmtwMlVUQmtRbFpYUmt0YU1qbHlWR3hrUzJGVk9WaFhWRkphVmtVeE1GZFdVbHBOYXpVMVRVUkNXbUZ0WXpGVVJsSnVUbFp3Y1ZKWVVscGxiR3QzVkd4U1QyRkZPVVZhTTJ4UFZqRndjbEl5WTNkVk1FMTVVbTVLYTFaNlZUSlhiR2hMWkdzNVZWbDZSa2hhTVZVd1RURkNjRmRWVmxOaU1HaEtXakZhTmxsV2FFOWpiVW8wWWpBMVRGb3pVbmRaYlRWVFlrZE9kRkp0Y0d0U01uZDVWMnhPU2sxWFJqWlRXRlpxVTBaYWNGbHJaSE5oYTNoMVYydHNhMlZ0WkROWmVrNUtaREpLVjJGNlVsSldiRnB5VmxSSk5XUXlVbGhOVmtwV1ZsaG9NVlF3WXpSbGJGSklWV3hrYUZOSGFEVlhWbU0xVjBaV1JsWllhRTlXYTFvd1YyeFdjbEJXVjJWeWNHVkhkbUYyV1ZCTGJFSnFPSGxFTldSVmVFSTFWSGhTVFhKWFdYVkJZMEZKV0VSTk9Ib3dhM1JLVTBReFNVYzJRVWxzVDFoVlYzWm1VeTFGZEhKTFRFY3pTR3B2V2xONE5HeDVPVTQyZWt0bll5NVNNRVpHWVZWS2RGUnVXbWxpVkVadldXMW9UVmxyUm5WWFdHeE5ZbXRKZUZkWE1UUmpSbXcxVGxaS1RtSldTVEpXVkVaclRVZFdkRk5zV2xSaWJrSlhWbTB4TkZVeFVuSlZiVVpPVm01Q1YxVXlkRTlXUmxwWllVVldWbVZyU25KVmFrRXhVMVpHY2xOc1drNVNiSEJUVm0xd1QxbFhVbGRpTTJoVFlsZG9VMVpxU205a1ZsWllaRWQwYVdKRk5WaFphMVpQVm0xS1ZXSkZWbFpoYTBwSVdrZDRjMVpzU25WU2JFcFhWbGhDU2xZeWNFTmpNV1J6VW14b2FGTkdjRk5VVldSVFVURmFSMXBGWkZKaVZWcEpWMnRWZUZVd01YUlZhM1JYVFZaYVZGVlVTa3BrTVZKeVlVWktWMkV4Y0haV1ZscHJZakpLYzFSdVNtbFRSVnBZV1cxMGQxUXhiRmRWYkdST1RWaENTRmRyVmpCaGF6RnlWMnhzVjFKdGFGaFdSRVpoWkVkV1NXTkdaRmRpVmtwSlZrWlNTMVF5VFhsVGFscFdZWHBzV0ZSWGVFdGlNVmw1VFZSU1ZFMXJXa2RVVmxaclZrZEtSbGRzV2xwV2VrVXdWMVphYzA1c1JsVlNiWEJwVWxoQ05sWkVSbGRaVjBWNVUyeHNWbFpGV2xkWmExcGhZMnh3U0dWRldteFNia0pHVmpJeGQyRkhSWGhqUnpsWFlXdGFWRlY2Ums1bFJscHpVMnhHVjFKRlNqTldNblJoVjIxT2RHTkZNVkJYUlRSNldrVldXazVXY0VWU1dGSnBZbFJXVVZRd1pHRlZiVXBZWVVSS1ZGSldjSGhXYTFaeVpFZFNSV0ZGY0dsaVZuQlJWMFJKZUZaVk1YUlplbEpxVjBoQ1JsVnJaRlpPUmxwRllrWlNhRTFXU2paWGJYaHZZbGRXY21KNlFsaFdWVEUyVjIxemQyVnNaRlpPV0VwVVZrZFNXVmRYYTNkT1ZrcHlWVzA1VDJGVVJreFVha2sxVWtWNGMxTllaRk5oTVhCdlZteFdkMDFHV2toT1YwWm9WakJ3VmxWdE1EVlhiVXBZVldwS1ZtRnJjRkJWTVZwUFpGWmtkRkpzVGxObGJXY3c
+declare -gx REPLIT_RIPPKGS_INDICES=/nix/store/mfrw2kh7ppd5qmjwm5sj9c41lkh2hlij-rippkgs-indices
+declare -gx LIBGL_DRIVERS_PATH=/nix/store/0lfnrz6nq5myv787cih78knzaqy9z9fc-mesa-23.1.9-drivers/lib/dri
+declare -gx REPLIT_PID1_FLAG_REPLIT_RTLD_LOADER=1
+declare -gx DENO_TLS_CA_STORE=system
+declare -gx NIX_PROFILES='/nix/var/nix/profiles/default /home/runner/.nix-profile'
+declare -gx REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+declare -gx __EGL_VENDOR_LIBRARY_FILENAMES=/nix/store/0lfnrz6nq5myv787cih78knzaqy9z9fc-mesa-23.1.9-drivers/share/glvnd/egl_vendor.d/50_mesa.json
+declare -gx DOCKER_CONFIG=/home/runner/fotofolio-1/.config/docker
+declare -gx REPL_IDENTITY_KEY=k2.secret.pTlI3jsfPIiznz7mvjTbDoEbRqYmvyAerBaoxL6LbRa8fDzSyvSZjwBR1Kim6ZBAufyjct1WHGtqhY8TXlCZ4g
+declare -gx REPL_OWNER=akunzero975
+declare -gx REPL_IMAGE=gcr.io/marine-cycle-160323/nix:bf8590a3e2f0a8b70b7ca175eeed9074dffbfca9

@@ -1,0 +1,387 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  font-size: -15px;
+  scroll-behavior: smooth;
+  /* Untuk IE dan Edge */
+  -ms-overflow-style: none;
+  /* Untuk Firefox */
+  scrollbar-width: none;
+}
+
+/* Untuk Chrome, Safari, */
+.scrollable-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* bagian Header */
+header {
+  background: #1A2238;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.logo {
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: auto;
+  align-items: center;
+  text-align: center;
+  background: #eaeaea;
+}
+
+.logo-img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: #FF6A3D;
+  /* transition semua dalam waktu 0,5 detik dgn animasi ease tampa delay*/
+  transition: all 0.5s ease 0s;
+  transform: rotate(2deg);
+  font-size: 10px;
+}
+
+nav ul {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+li a {
+  display: inline-block;
+}
+
+a {
+  color: #eaeaea;
+  text-decoration: none;
+}
+
+.btn-cta {
+  margin-right: 10px;
+  border: none;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 6px 12px;
+  background: #FF6A3D;
+  cursor: pointer;
+}
+
+
+/* bagina fotofolio*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.description {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.img-foto {
+  width: 100%;
+  max-width: 500px;
+  max-height: auto;
+  padding: 10px;
+}
+
+.parallax {
+  background-image: url('logo/sample_image.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.tentang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #1A2238;
+  color: #eaeaea;
+  padding: 30px
+}
+
+.mt-10 {
+  margin-top: 15px;
+}
+
+
+/*animasi skil-card*/
+.skil-container {
+  display: flex;
+  margin-bottom: 5px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  height: 125px;
+  width: 100%;
+  overflow: scroll;
+  background: #eaeaea;
+}
+
+.skil-card {
+  padding: 5px;
+  margin: 10px;
+  height: 85%;
+  box-shadow: 2px 5px 4px 1.5px rgba(0, 0, 0, 0.5);
+  animation: moveLeft 10s linear infinite;
+}
+
+.img-skil {
+  padding: 2px;
+  width: 75px;
+}
+
+.img-skil {
+  background-color: #d4d4d4;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translate(-100%);
+  }
+
+  50% {
+    transform: translate(100%);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
+
+}
+
+/*card y di bawah tombol (about me)*/
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-item {
+  text-align: center;
+  width: 25%;
+  background: #eaeaea;
+  color: #222;
+  padding: 20px;
+
+  box-shadow: 2px 5px 4px 1.5px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: border;
+}
+
+.card-description {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+  margin: 10px
+}
+
+/* bagian Commentar*/
+.comment-section {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 1000px;
+  margin: 20px 0 20px auto;
+  background-color: #fff;
+}
+
+.img-message {
+  width: 50px;
+  height: 50px;
+}
+
+.comment-form {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+#submit-comment :hover {
+  background-color: gray;
+}
+
+.comments-list {
+  padding: 10px;
+  display: flex;
+  width: 45%;
+  overflow: scroll;
+  height: 90px;
+  flex-direction: column;
+}
+
+.comment {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  position: relative;
+}
+
+.comment .actions {
+  position: absolute;
+  top: 5p;
+  right: 5px;
+  display: flex;
+  gap: 5px;
+}
+
+.comment .actions #submit-comment {
+  padding: 5p 10px;
+  background-color: #ccc;
+  color: #000;
+}
+
+.comment .actions #submit-comment:hover {
+  background-color: #aaa;
+}
+
+.delete-comment,
+.edit-comment {
+  margin: 3px;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 10px;
+  transition: 1.5s;
+}
+
+.delete-comment {
+  background-color: #f44336;
+
+}
+
+.edit-comment {
+  background-color: #4CAF50;
+}
+
+
+
+/*bagian footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #1A2238;
+  color: #eaeaea
+}
+
+@media screen and (max-width : 500px) {
+  .parallax {
+    height: 124.5vh;
+    overflow: scroll;
+  }
+
+  /*bagian card*/
+
+  .card {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .card-item {
+    width: 100%;
+    text-align: start;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0;
+
+  }
+
+  .intro {
+    margin-top: 20px;
+  }
+
+  .img-foto {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  /*bagian ini mengatur */
+  nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: #1A2238;
+    z-index: 10;
+  }
+
+  /*bagian comentar */
+  .comment-section {
+    flex-direction: column;
+    height: 220px;
+    padding: 20px;
+    gap: 0px;
+    align-items: normal;
+  }
+
+  .img-message {
+    display: none;
+  }
+
+  .comment-form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .comments-list {
+    width: 100%;
+
+  }
